@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#addSlot">Add Slot</a>
+            <a href="#parkVehicle">Park</a>
+            <a href="#removeVehicle">Remove</a>
+            <a href="#slots">Slots</a>
+        </div>
+        <h1>Smart Parking</h1>
+        <p class="subtitle">Enterprise-grade parking operations monitoring & control</p>
+    </header>
+    <main>
+        <div class="container">
+            <div id="addSlot" class="form-group">
+                <h2>Add Parking Slot</h2>
+                <input type="text" id="slotId" placeholder="Slot ID">
+                <button onclick="addParkingSlot()">Add Slot</button>
+            </div>
+            <div id="parkVehicle" class="form-group">
+                <h2>Park Vehicle</h2>
+                <input type="text" id="vehicleNumber" placeholder="Vehicle Number">
+                <label for="slotToPark">Choose free slot:</label>
+                <select id="slotToPark" style="width: 100%; padding: 10px; margin: 8px 0 14px 0; border-radius: 8px; border: 1px solid #b5ead7;"></select>
+                <button onclick="parkVehicle()">Park Vehicle</button>
+            </div>
+            <div id="vehicleExit" class="form-group">
+                <h2>Vehicle Exit</h2>
+                <input type="text" id="slotToRemove" placeholder="Slot ID">
+                <button onclick="vehicleExit()">Vehicle Exit</button>
+            </div>
+            <div id="removeSlot" class="form-group">
+                <h2>Delete Slot</h2>
+                <input type="text" id="slotToDelete" placeholder="Slot ID">
+                <button onclick="deleteSlot()">Delete Slot</button>
+            </div>
+            <div id="message"></div>
+            <div id="slots">
+                <div id="slots-container"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Made with for Smart Parking</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
