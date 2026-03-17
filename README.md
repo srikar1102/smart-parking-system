@@ -85,4 +85,3 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8082"
 - vehicle parking/exit
 - slot deletion + database persistence
 - UI status cards with slot display
-- 
